@@ -16,8 +16,9 @@ This is a small project made for an interview. The goal was safe some infos abou
 - run "gitclone [link for this repository]" in your terminal;
 - run "composer update" inside the project directory;
 - create a .env file via .env.example;
+- inside the folder *database* located in the root of the project, you have to create a file named "database.sqlite" to be your database while running;
+- in another terminal redirected in a project directory, you have to run "php artisan migrate" to set the tables to your local database;
 - run "php artisan serve" inside the project directory;
-- in another terminal redirected on a project directory, you have to run "php artisan migrate" to set the tables to your local database. *The .sqlite can see inside the database file*
 
 ## Opening in browser
 
