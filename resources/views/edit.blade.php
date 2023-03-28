@@ -39,7 +39,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Bio:</strong>
-                        <textarea type="text" name="bio" value="{{ $qrcode->bio }}" class="form-control"></textarea>
+                        <textarea type="text" name="bio" class="form-control">{{ $qrcode->bio }}</textarea>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
