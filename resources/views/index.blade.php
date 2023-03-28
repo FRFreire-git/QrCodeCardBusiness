@@ -39,7 +39,7 @@
                 <td>
                     <form action="{{ route('qrcode.destroy',$qrcode->id) }}" method="POST">
                         <a class="btn btn-info" href="{{ route('qrcode.showDetails',$qrcode->slug) }}">Show</a>
-                        <a class="btn btn-warning" href="{{ route('qrcode.edit',$qrcode->id) }}">Edit</a>
+                        <a class="btn btn-warning" href="{{ route('qrcode.edit',$qrcode->slug) }}">Edit</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>

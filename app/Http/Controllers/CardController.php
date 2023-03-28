@@ -44,9 +44,9 @@ class CardController extends Controller
         return view('show', compact('qrcode'));
     }
 
-    public function edit(string $id)
+    public function edit(string $slug)
     {
-        $qrcode = QrCode::find($id);
+        $qrcode = QrCode::where('slug', '=', $slug)->first();
         return view('edit', compact('qrcode'));
     }
 
