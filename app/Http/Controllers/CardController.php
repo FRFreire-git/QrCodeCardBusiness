@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Qrcode;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class CardController extends Controller
 {
@@ -41,12 +42,22 @@ class CardController extends Controller
     public function show(string $slug)
     {
         $qrcode = QrCode::where('slug', '=', $slug)->first();
+        
+        if (!$qrcode) {
+            throw new ModelNotFoundException('User not found by ID ' . $qrcode);
+        }
+
         return view('show', compact('qrcode'));
     }
 
     public function edit(string $slug)
     {
         $qrcode = QrCode::where('slug', '=', $slug)->first();
+
+        if (!$qrcode) {
+            throw new ModelNotFoundException('User not found by ID ' . $qrcode);
+        }
+
         return view('edit', compact('qrcode'));
     }
 
